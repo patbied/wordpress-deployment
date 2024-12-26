@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "No build steps needed..."
+  build:
+    commands:
+      - echo "Packaging artifacts..."
+artifacts:
+  files:
+    - AppSpec.yml
+    - scripts/**/*
+    - plugins/**/*
+    - themes/**/*
+  discard-paths: no
