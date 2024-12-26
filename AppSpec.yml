@@ -9,10 +9,10 @@ files:
 
 hooks:
   AfterInstall:
-    - location: scripts/permissions.sh
+    - location: permissions.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/restart_httpd.sh
+    - location: restart_httpd.sh
       timeout: 300
       runas: root
