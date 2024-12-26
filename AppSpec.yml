@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /plugins
+    destination: /var/www/html/wp-content/plugins/custom-plugin
+  - source: /themes
+    destination: /var/www/html/wp-content/themes/custom-theme
+
+hooks:
+  AfterInstall:
+    - location: scripts/permissions.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/restart_httpd.sh
+      timeout: 300
+      runas: root
